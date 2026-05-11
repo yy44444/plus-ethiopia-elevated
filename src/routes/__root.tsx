@@ -72,11 +72,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Plus Facilities — Premium Facility Management in Ethiopia" },
+      { name: "description", content: "Integrated facility management: cleaning, security, landscaping, pest control and event support across Ethiopia." },
+      { name: "author", content: "Plus Facilities" },
+      { property: "og:title", content: "Plus Facilities — Premium Facility Management" },
+      { property: "og:description", content: "Trusted cleaning, security, landscaping, pest control and event support services across Ethiopia." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
@@ -108,12 +108,24 @@ function RootShell({ children }: { children: React.ReactNode }) {
   );
 }
 
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { QuoteProvider } from "@/components/QuoteModal";
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <QuoteProvider>
+        <Navbar />
+        <main className="min-h-screen">
+          <Outlet />
+        </main>
+        <Footer />
+        <WhatsAppButton />
+      </QuoteProvider>
     </QueryClientProvider>
   );
 }
