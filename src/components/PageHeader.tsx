@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 export function PageHeader({ eyebrow, title, intro }: { eyebrow: string; title: ReactNode; intro?: string }) {
   return (
-    <section className="relative overflow-hidden pt-40 pb-20 md:pt-48 md:pb-28">
+    <section className="relative overflow-hidden pt-44 pb-20 md:pt-52 md:pb-28">
       <div className="absolute inset-0 -z-10 bg-gradient-soft" />
       <div className="absolute -top-32 -right-32 -z-10 h-[500px] w-[500px] animate-float-slow rounded-full opacity-30" style={{ background: "radial-gradient(circle, oklch(0.72 0.08 155 / 0.4), transparent 70%)" }} />
       <div className="absolute -bottom-32 -left-32 -z-10 h-[400px] w-[400px] animate-float-slow rounded-full opacity-30" style={{ background: "radial-gradient(circle, oklch(0.55 0.07 200 / 0.4), transparent 70%)", animationDelay: "-7s" }} />
