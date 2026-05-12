@@ -149,7 +149,24 @@
   font-display: swap;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Noto+Sans+Ethiopic:wght@400;500;600;700&family=Noto+Serif+Ethiopic:wght@500;600;700&display=swap");
+
+/* Amharic typography */
+html[lang="am"] body, html[data-lang="am"] body {
+  font-family: "Noto Sans Ethiopic", "Inter", system-ui, sans-serif;
+  letter-spacing: 0;
+}
+html[lang="am"] h1, html[lang="am"] h2, html[lang="am"] h3, html[lang="am"] h4,
+html[data-lang="am"] h1, html[data-lang="am"] h2, html[data-lang="am"] h3, html[data-lang="am"] h4 {
+  font-family: "Noto Serif Ethiopic", "Playfair Display", serif;
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+/* Smooth language transition */
+html { transition: none; }
+body { transition: opacity 220ms ease; }
+html.lang-switching body { opacity: 0.55; }
 
 /* Animations */
 @keyframes fade-up {
