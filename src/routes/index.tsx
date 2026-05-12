@@ -73,15 +73,6 @@ function About() {
         <div className="relative">
           <div className="absolute -inset-6 -z-10 rounded-3xl bg-gradient-brand opacity-20 blur-2xl" />
           <img src={aboutImg} alt="Plus Facilities team" loading="lazy" width={1280} height={1024} className="rounded-3xl shadow-elegant" />
-          <div className="absolute -bottom-8 -right-8 hidden rounded-2xl bg-card p-6 shadow-elegant md:block">
-            <div className="flex items-center gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-brand"><Award className="text-white" size={22} /></div>
-              <div>
-                <p className="font-display text-2xl">10+ Years</p>
-                <p className="text-xs text-muted-foreground">of operational excellence</p>
-              </div>
-            </div>
-          </div>
         </div>
         <div>
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-accent">About Plus Facilities</p>
@@ -93,15 +84,15 @@ function About() {
             We combine modern operational standards with customer-focused service to help clients maintain environments that reflect excellence.
           </p>
 
-          <div className="mt-10 grid grid-cols-3 gap-4 border-t border-border pt-8">
+          <div className="mt-10 grid gap-5 border-t border-border pt-8 sm:grid-cols-3">
             {[
-              { n: "500+", l: "Projects delivered" },
-              { n: "120+", l: "Trained staff" },
-              { n: "98%", l: "Client retention" },
+              { t: "Trained Teams", d: "Professional, vetted staff" },
+              { t: "Reliable Service", d: "Consistent quality, every visit" },
+              { t: "Accountable", d: "A real person who answers" },
             ].map((s) => (
-              <div key={s.l}>
-                <p className="font-display text-3xl text-gradient-brand md:text-4xl">{s.n}</p>
-                <p className="mt-1 text-xs text-muted-foreground">{s.l}</p>
+              <div key={s.t}>
+                <p className="font-display text-lg text-primary">{s.t}</p>
+                <p className="mt-1 text-sm text-muted-foreground">{s.d}</p>
               </div>
             ))}
           </div>
@@ -110,6 +101,7 @@ function About() {
     </section>
   );
 }
+
 
 function ServicesGrid() {
   return (
