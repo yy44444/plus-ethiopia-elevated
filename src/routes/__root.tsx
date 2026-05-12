@@ -110,20 +110,23 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { QuoteProvider } from "@/components/QuoteModal";
+import { LanguageProvider } from "@/lib/i18n";
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
-      <QuoteProvider>
-        <Navbar />
-        <main className="min-h-screen">
-          <Outlet />
-        </main>
-        <Footer />
-        <WhatsAppButton />
-      </QuoteProvider>
+      <LanguageProvider>
+        <QuoteProvider>
+          <Navbar />
+          <main className="min-h-screen">
+            <Outlet />
+          </main>
+          <Footer />
+          <WhatsAppButton />
+        </QuoteProvider>
+      </LanguageProvider>
     </QueryClientProvider>
   );
 }
