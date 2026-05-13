@@ -40,8 +40,8 @@ const en: Dict = {
   "home.about.d1": "Professional, vetted staff",
   "home.about.t2": "Reliable Service",
   "home.about.d2": "Consistent quality, every visit",
-  "home.about.t3": "Accountable",
-  "home.about.d3": "A real person who answers",
+  "home.about.t3": "Reliable Support",
+  "home.about.d3": "From real professionals, every time",
 
   // Services grid
   "home.services.eyebrow": "What we do",
@@ -245,8 +245,8 @@ const am: Dict = {
   "home.about.d1": "ሙያዊና የተረጋገጡ ሠራተኞች",
   "home.about.t2": "አስተማማኝ አገልግሎት",
   "home.about.d2": "በእያንዳንዱ ጉብኝት ወጥ ጥራት",
-  "home.about.t3": "ተጠያቂነት",
-  "home.about.d3": "የሚመልስ እውነተኛ ሰው",
+  "home.about.t3": "አስተማማኝ ድጋፍ",
+  "home.about.d3": "ከእውነተኛ ባለሙያዎች በየጊዜው",
 
   // Services grid
   "home.services.eyebrow": "የምንሰራው ስራ",
