@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
-import { MapPin, Phone, Mail, MessageCircle, Send } from "lucide-react";
+import { useRef, useState } from "react";
+import { MapPin, Phone, Mail, MessageCircle, Send, Loader2 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { site, services } from "@/lib/site";
 import { useT } from "@/lib/i18n";
+import { sendForm } from "@/lib/sendForm";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -19,7 +20,34 @@ export const Route = createFileRoute("/contact")({
 
 function Contact() {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const formRef = useRef<HTMLFormElement>(null);
   const { t } = useT();
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+    const fd = new FormData(e.currentTarget);
+    try {
+      await sendForm({
+        source: "Contact Form",
+        name: String(fd.get("name") || ""),
+        email: String(fd.get("email") || ""),
+        phone: String(fd.get("phone") || ""),
+        service: String(fd.get("service") || ""),
+        message: String(fd.get("message") || ""),
+      });
+      formRef.current?.reset();
+      setSent(true);
+    } catch {
+      setError("Could not send. Please try again or email us directly.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
       <PageHeader
@@ -40,21 +68,22 @@ function Contact() {
                 <p className="mt-2 text-muted-foreground">{t("contact.form.received")}</p>
               </div>
             ) : (
-              <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} className="mt-8 grid gap-5">
+              <form ref={formRef} onSubmit={onSubmit} className="mt-8 grid gap-5">
                 <div className="grid gap-5 md:grid-cols-2">
-                  <Field label={t("contact.form.name")} required><input required className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary" /></Field>
-                  <Field label={t("contact.form.phone")} required><input required type="tel" className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary" /></Field>
+                  <Field label={t("contact.form.name")} required><input name="name" required className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary" /></Field>
+                  <Field label={t("contact.form.phone")} required><input name="phone" required type="tel" className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary" /></Field>
                 </div>
-                <Field label={t("contact.form.email")} required><input required type="email" className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary" /></Field>
+                <Field label={t("contact.form.email")} required><input name="email" required type="email" className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary" /></Field>
                 <Field label={t("contact.form.service")}>
-                  <select className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary">
-                    <option>{t("contact.form.service.placeholder")}</option>
-                    {services.map(s => <option key={s.slug}>{t(`svc.${s.slug}.title`)}</option>)}
+                  <select name="service" className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary">
+                    <option value="">{t("contact.form.service.placeholder")}</option>
+                    {services.map(s => <option key={s.slug} value={s.slug}>{t(`svc.${s.slug}.title`)}</option>)}
                   </select>
                 </Field>
-                <Field label={t("contact.form.message")}><textarea rows={5} className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary" /></Field>
-                <button type="submit" className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-brand px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-soft transition hover:-translate-y-0.5">
-                  {t("cta.send")} <Send size={14} />
+                <Field label={t("contact.form.message")}><textarea name="message" rows={5} className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary" /></Field>
+                {error && <p className="text-xs text-destructive">{error}</p>}
+                <button disabled={loading} type="submit" className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-brand px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-soft transition hover:-translate-y-0.5 disabled:opacity-70">
+                  {loading ? <Loader2 size={14} className="animate-spin" /> : <>{t("cta.send")} <Send size={14} /></>}
                 </button>
               </form>
             )}

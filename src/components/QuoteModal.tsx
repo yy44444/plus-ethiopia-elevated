@@ -1,7 +1,8 @@
-import { useState, createContext, useContext, type ReactNode } from "react";
-import { X } from "lucide-react";
+import { useState, createContext, useContext, useRef, type ReactNode } from "react";
+import { X, Loader2 } from "lucide-react";
 import { services } from "@/lib/site";
 import { useT } from "@/lib/i18n";
+import { sendForm } from "@/lib/sendForm";
 
 const Ctx = createContext<{ open: () => void } | null>(null);
 export const useQuote = () => {
@@ -24,6 +25,33 @@ export function QuoteProvider({ children }: { children: ReactNode }) {
 
 function QuoteDialog({ onClose, sent, setSent }: { onClose: () => void; sent: boolean; setSent: (v: boolean) => void }) {
   const { t } = useT();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+    const fd = new FormData(e.currentTarget);
+    try {
+      await sendForm({
+        source: "Quote Request",
+        name: String(fd.get("name") || ""),
+        email: String(fd.get("email") || ""),
+        phone: String(fd.get("phone") || ""),
+        service: String(fd.get("service") || ""),
+        message: String(fd.get("message") || ""),
+      });
+      formRef.current?.reset();
+      setSent(true);
+    } catch {
+      setError("Could not send. Please try again or email us directly.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center p-4 animate-fade-in"
@@ -52,21 +80,20 @@ function QuoteDialog({ onClose, sent, setSent }: { onClose: () => void; sent: bo
             <p className="text-xs uppercase tracking-[0.2em] text-accent">{t("quote.eyebrow")}</p>
             <h3 className="mt-2 text-2xl">{t("quote.title")}</h3>
             <p className="mt-1 text-sm text-muted-foreground">{t("quote.sub")}</p>
-            <form
-              className="mt-6 grid gap-4"
-              onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-            >
+            <form ref={formRef} className="mt-6 grid gap-4" onSubmit={onSubmit}>
               <div className="grid gap-4 sm:grid-cols-2">
-                <input required placeholder={t("quote.fullname")} className="rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary transition" />
-                <input required type="tel" placeholder={t("quote.phone")} className="rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary transition" />
+                <input name="name" required placeholder={t("quote.fullname")} className="rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary transition" />
+                <input name="phone" required type="tel" placeholder={t("quote.phone")} className="rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary transition" />
               </div>
-              <input required type="email" placeholder={t("quote.email")} className="rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary transition" />
-              <select className="rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary transition">
+              <input name="email" required type="email" placeholder={t("quote.email")} className="rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary transition" />
+              <select name="service" className="rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary transition">
                 <option value="">{t("quote.service.placeholder")}</option>
                 {services.map(s => <option key={s.slug} value={s.slug}>{t(`svc.${s.slug}.title`)}</option>)}
               </select>
-              <textarea rows={3} placeholder={t("quote.message")} className="rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary transition" />
-              <button type="submit" className="mt-2 rounded-xl bg-gradient-brand px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-soft transition hover:shadow-elegant hover:-translate-y-0.5">
+              <textarea name="message" rows={3} placeholder={t("quote.message")} className="rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary transition" />
+              {error && <p className="text-xs text-destructive">{error}</p>}
+              <button disabled={loading} type="submit" className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-brand px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-soft transition hover:shadow-elegant hover:-translate-y-0.5 disabled:opacity-70">
+                {loading && <Loader2 size={14} className="animate-spin" />}
                 {t("quote.submit")}
               </button>
             </form>
