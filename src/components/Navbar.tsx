@@ -43,7 +43,7 @@ export function Navbar() {
     >
       <nav className="container-px mx-auto flex h-24 max-w-7xl items-center justify-between md:h-28">
         <Link to="/" className="flex items-center gap-2 py-2" aria-label="Plus Facilities home">
-          <Logo className="h-12 md:h-16 lg:h-[72px]" />
+          <Logo className="h-16 md:h-20 lg:h-24" />
         </Link>
 
         <ul className="hidden items-center gap-1 lg:flex">
@@ -118,16 +118,16 @@ function LanguageToggle({ lang, onChange }: { lang: "en" | "am"; onChange: (l: "
     <div
       role="group"
       aria-label="Language"
-      className="relative flex items-center rounded-full border border-border/70 bg-card/70 p-1 shadow-soft backdrop-blur"
+      className="relative flex items-center rounded-full border border-border/60 bg-card/70 p-0.5 shadow-sm backdrop-blur"
     >
       <span
         aria-hidden
-        className="absolute top-1 bottom-1 w-[calc(50%-0.25rem)] rounded-full bg-gradient-brand shadow-soft transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)]"
-        style={{ left: lang === "en" ? "0.25rem" : "calc(50% + 0rem)" }}
+        className="absolute top-0.5 bottom-0.5 w-[calc(50%-0.125rem)] rounded-full bg-gradient-brand transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)]"
+        style={{ left: lang === "en" ? "0.125rem" : "calc(50% + 0rem)" }}
       />
       <button
         onClick={() => onChange("en")}
-        className={`relative z-10 rounded-full px-3 py-1.5 text-xs font-semibold transition-colors duration-300 ${
+        className={`relative z-10 rounded-full px-2.5 py-1 text-[11px] font-semibold leading-none transition-colors duration-300 ${
           lang === "en" ? "text-primary-foreground" : "text-foreground/70 hover:text-foreground"
         }`}
       >
@@ -135,12 +135,12 @@ function LanguageToggle({ lang, onChange }: { lang: "en" | "am"; onChange: (l: "
       </button>
       <button
         onClick={() => onChange("am")}
-        className={`relative z-10 rounded-full px-3 py-1.5 text-xs font-semibold transition-colors duration-300 ${
+        className={`relative z-10 rounded-full px-2.5 py-1 text-[11px] font-semibold leading-none transition-colors duration-300 ${
           lang === "am" ? "text-primary-foreground" : "text-foreground/70 hover:text-foreground"
         }`}
         style={{ fontFamily: '"Noto Sans Ethiopic", system-ui, sans-serif' }}
       >
-        አማርኛ
+        አማ
       </button>
     </div>
   );

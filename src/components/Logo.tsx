@@ -8,7 +8,7 @@ export function Logo({
     <img
       src={logo}
       alt="Plus Facilities"
-      className={`${className ?? "h-14 md:h-16"} w-auto object-contain ${invert ? "brightness-0 invert" : ""}`}
+      className={`${className ?? "h-16 md:h-20"} w-auto object-contain ${invert ? "brightness-0 invert" : ""}`}
       style={{ imageRendering: "auto" }}
     />
   );
