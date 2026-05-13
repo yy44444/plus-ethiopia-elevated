@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
-import { MapPin, Phone, Mail, MessageCircle, Send } from "lucide-react";
+import { useRef, useState } from "react";
+import { MapPin, Phone, Mail, MessageCircle, Send, Loader2 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { site, services } from "@/lib/site";
 import { useT } from "@/lib/i18n";
+import { sendForm } from "@/lib/sendForm";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -19,7 +20,34 @@ export const Route = createFileRoute("/contact")({
 
 function Contact() {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const formRef = useRef<HTMLFormElement>(null);
   const { t } = useT();
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+    const fd = new FormData(e.currentTarget);
+    try {
+      await sendForm({
+        source: "Contact Form",
+        name: String(fd.get("name") || ""),
+        email: String(fd.get("email") || ""),
+        phone: String(fd.get("phone") || ""),
+        service: String(fd.get("service") || ""),
+        message: String(fd.get("message") || ""),
+      });
+      formRef.current?.reset();
+      setSent(true);
+    } catch {
+      setError("Could not send. Please try again or email us directly.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
       <PageHeader
