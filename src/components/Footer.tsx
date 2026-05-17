@@ -24,11 +24,11 @@ export function Footer() {
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-[oklch(0.78_0.015_190)]">
               {t("footer.about")}
             </p>
-            <div className="mt-6 flex gap-5">
+            <div className="mt-6 flex gap-3">
               {[
                 { label: "Facebook", href: "https://www.facebook.com/share/17n4CKBvN6/?mibextid=wwXIfr", Icon: Facebook },
                 { label: "Instagram", href: "https://www.instagram.com/plusfacilities", Icon: Instagram },
-                { label: "TikTok", href: "https://www.tiktok.com/@plusfacilities?_r=1&_t=ZS-96RPRW6Ekfw", Icon: TikTokIcon },
+                { label: "TikTok", href: "https://www.tiktok.com/@plusfacilities", Icon: TikTokIcon },
               ].map(({ label, href, Icon }) => (
                 <a
                   key={label}
@@ -36,14 +36,9 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="group flex flex-col items-center gap-1.5"
+                  className="rounded-full border border-white/10 p-2.5 transition hover:border-accent hover:bg-accent/10 hover:text-accent"
                 >
-                  <span className="rounded-full border border-white/10 p-2.5 transition group-hover:border-accent group-hover:bg-accent/10 group-hover:text-accent">
-                    <Icon size={16} />
-                  </span>
-                  <span className="text-[10px] uppercase tracking-[0.14em] text-[oklch(0.78_0.015_190)] transition group-hover:text-accent">
-                    {label}
-                  </span>
+                  <Icon size={16} />
                 </a>
               ))}
             </div>
