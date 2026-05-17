@@ -1,8 +1,16 @@
 import { Link } from "@tanstack/react-router";
-import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
 import { Logo } from "./Logo";
 import { navLinks, services, site } from "@/lib/site";
 import { useT } from "@/lib/i18n";
+
+function TikTokIcon({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.07A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.5a8.16 8.16 0 0 0 4.77 1.52V6.69h-1.84Z" />
+    </svg>
+  );
+}
 
 export function Footer() {
   const { t } = useT();
@@ -16,10 +24,26 @@ export function Footer() {
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-[oklch(0.78_0.015_190)]">
               {t("footer.about")}
             </p>
-            <div className="mt-6 flex gap-3">
-              {[Facebook, Instagram, Linkedin, Twitter].map((Icon, i) => (
-                <a key={i} href="#" aria-label="social" className="rounded-full border border-white/10 p-2.5 transition hover:border-accent hover:bg-accent/10 hover:text-accent">
-                  <Icon size={16} />
+            <div className="mt-6 flex gap-5">
+              {[
+                { label: "Facebook", href: "https://www.facebook.com/share/17n4CKBvN6/?mibextid=wwXIfr", Icon: Facebook },
+                { label: "Instagram", href: "https://www.instagram.com/plusfacilities", Icon: Instagram },
+                { label: "TikTok", href: "https://www.tiktok.com/@plusfacilities?_r=1&_t=ZS-96RPRW6Ekfw", Icon: TikTokIcon },
+              ].map(({ label, href, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="group flex flex-col items-center gap-1.5"
+                >
+                  <span className="rounded-full border border-white/10 p-2.5 transition group-hover:border-accent group-hover:bg-accent/10 group-hover:text-accent">
+                    <Icon size={16} />
+                  </span>
+                  <span className="text-[10px] uppercase tracking-[0.14em] text-[oklch(0.78_0.015_190)] transition group-hover:text-accent">
+                    {label}
+                  </span>
                 </a>
               ))}
             </div>
