@@ -27,7 +27,7 @@ export function Footer() {
             <div className="mt-6 flex gap-3">
               {[
                 { label: "Facebook", href: "https://www.facebook.com/share/17n4CKBvN6/?mibextid=wwXIfr", Icon: Facebook },
-                { label: "Instagram", href: "https://www.instagram.com/plusfacilities", Icon: Instagram },
+                { label: "Instagram", href: "https://www.instagram.com/plusfacilities_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", Icon: Instagram },
                 { label: "TikTok", href: "https://www.tiktok.com/@plusfacilities", Icon: TikTokIcon },
               ].map(({ label, href, Icon }) => (
                 <a
