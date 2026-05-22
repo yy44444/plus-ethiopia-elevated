@@ -4,7 +4,7 @@ export const site = {
   phoneDigits: "251975123512",
   email: "info.plusfacilities@gmail.com",
   formEndpoint: "https://formsubmit.co/ajax/info.plusfacilities@gmail.com",
-  location: "Addis Ababa, Ethiopia",
+  location: "Ayat Shopping Mall, 2VC9+7M8, Addis Ababa",
   whatsapp: "https://wa.me/251975123512",
   tagline: "Integrated Facility Management",
 };

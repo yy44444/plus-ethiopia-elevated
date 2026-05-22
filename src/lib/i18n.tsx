@@ -206,7 +206,7 @@ const en: Dict = {
   "footer.tagline": "Designed for excellence. Built for trust.",
 
   // Misc
-  "addis": "Addis Ababa, Ethiopia",
+  "addis": "Ayat Shopping Mall, 2VC9+7M8, Addis Ababa",
 };
 
 const am: Dict = {
@@ -411,7 +411,7 @@ const am: Dict = {
   "footer.tagline": "ለብቃት የተዘጋጀ። በእምነት የተገነባ።",
 
   // Misc
-  "addis": "አዲስ አበባ፣ ኢትዮጵያ",
+  "addis": "አያት ሞል፣ 2VC9+7M8፣ አዲስ አበባ",
 };
 
 const dicts: Record<Lang, Dict> = { en, am };
