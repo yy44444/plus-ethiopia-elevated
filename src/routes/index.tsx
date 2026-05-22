@@ -29,7 +29,7 @@ function Hero() {
   const { t } = useT();
   return (
     <section className="relative min-h-[100svh] overflow-hidden">
-      <img src={heroImg} alt="Plus Facilities team" className="absolute inset-0 h-full w-full object-cover" width={1920} height={1280} />
+      <img src={heroImg} alt="Plus Facilities cleaning and facility management team in Addis Ababa, Ethiopia" className="absolute inset-0 h-full w-full object-cover" width={1920} height={1280} />
       <div className="absolute inset-0" style={{ background: "var(--gradient-hero-overlay)" }} />
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-20 -right-20 h-[500px] w-[500px] animate-spin-slow rounded-full border border-white/10" />
