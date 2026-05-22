@@ -206,7 +206,7 @@ const en: Dict = {
   "footer.tagline": "Designed for excellence. Built for trust.",
 
   // Misc
-  "addis": "Addis Ababa, Ethiopia",
+  "addis": "Ayat Shopping Mall, 2VC9+7M8, Addis Ababa",
 };
 
 const am: Dict = {
