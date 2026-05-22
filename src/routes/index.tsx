@@ -10,11 +10,14 @@ import { useT } from "@/lib/i18n";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Plus Facilities — Premium Facility Management Ethiopia" },
-      { name: "description", content: "Integrated cleaning, security, landscaping, pest control and event support services for businesses across Ethiopia." },
-      { property: "og:title", content: "Plus Facilities" },
-      { property: "og:description", content: "Premium integrated facility management across Ethiopia." },
+      { title: "Plus Facilities | Cleaning, Security & Facility Management in Addis Ababa, Ethiopia" },
+      { name: "description", content: "Trusted facility management company in Addis Ababa offering cleaning services, security services, pest control, landscaping, event support and property management across Ethiopia." },
+      { name: "keywords", content: "cleaning services Addis Ababa, security services Ethiopia, pest control Addis Ababa, gardening services Ethiopia, property management Addis Ababa, event support services Ethiopia, facility management Ethiopia" },
+      { property: "og:title", content: "Plus Facilities — Facility Management in Addis Ababa" },
+      { property: "og:description", content: "Premium cleaning, security, landscaping, pest control and event support services across Addis Ababa and Ethiopia." },
+      { property: "og:url", content: "/" },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Home,
 });
@@ -26,7 +29,7 @@ function Hero() {
   const { t } = useT();
   return (
     <section className="relative min-h-[100svh] overflow-hidden">
-      <img src={heroImg} alt="Plus Facilities team" className="absolute inset-0 h-full w-full object-cover" width={1920} height={1280} />
+      <img src={heroImg} alt="Plus Facilities cleaning and facility management team in Addis Ababa, Ethiopia" className="absolute inset-0 h-full w-full object-cover" width={1920} height={1280} />
       <div className="absolute inset-0" style={{ background: "var(--gradient-hero-overlay)" }} />
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-20 -right-20 h-[500px] w-[500px] animate-spin-slow rounded-full border border-white/10" />

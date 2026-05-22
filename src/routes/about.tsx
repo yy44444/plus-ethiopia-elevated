@@ -7,11 +7,13 @@ import { useT } from "@/lib/i18n";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Plus Facilities" },
-      { name: "description", content: "Plus Facilities is Ethiopia's integrated facility management partner — trained teams, modern systems, measurable standards." },
-      { property: "og:title", content: "About Plus Facilities" },
-      { property: "og:description", content: "Trained teams, modern systems, measurable standards." },
+      { title: "About Plus Facilities | Leading Facility Management Company in Ethiopia" },
+      { name: "description", content: "Plus Facilities is a trusted facility management company in Addis Ababa, Ethiopia — delivering cleaning, security, landscaping, pest control and event support with trained teams and modern systems." },
+      { property: "og:title", content: "About Plus Facilities — Addis Ababa" },
+      { property: "og:description", content: "Trained teams, modern systems, measurable standards across Ethiopia." },
+      { property: "og:url", content: "/about" },
     ],
+    links: [{ rel: "canonical", href: "/about" }],
   }),
   component: About,
 });

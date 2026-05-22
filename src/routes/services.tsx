@@ -13,11 +13,14 @@ import pest from "@/assets/pest.jpg";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Plus Facilities" },
-      { name: "description", content: "Cleaning, security, landscaping, pest control and event support — five integrated services from one accountable partner." },
-      { property: "og:title", content: "Services — Plus Facilities" },
-      { property: "og:description", content: "Five integrated facility services across Ethiopia." },
+      { title: "Cleaning, Security, Pest Control & Landscaping Services in Addis Ababa | Plus Facilities" },
+      { name: "description", content: "Professional cleaning services, security services, pest control, gardening, event support and property management in Addis Ababa and across Ethiopia. Request a free quote." },
+      { name: "keywords", content: "cleaning services in Addis Ababa, best pest control company in Ethiopia, security services Addis Ababa, gardening services Addis Ababa, event support services Ethiopia, property management Ethiopia" },
+      { property: "og:title", content: "Facility Services in Addis Ababa — Plus Facilities" },
+      { property: "og:description", content: "Five integrated facility services for businesses in Addis Ababa and Ethiopia." },
+      { property: "og:url", content: "/services" },
     ],
+    links: [{ rel: "canonical", href: "/services" }],
   }),
   component: Services,
 });

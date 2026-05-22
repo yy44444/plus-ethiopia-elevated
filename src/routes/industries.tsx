@@ -6,11 +6,13 @@ import { useT } from "@/lib/i18n";
 export const Route = createFileRoute("/industries")({
   head: () => ({
     meta: [
-      { title: "Industries — Plus Facilities" },
-      { name: "description", content: "We serve corporate offices, hotels, residences, commercial buildings, warehouses, retail spaces and event venues across Ethiopia." },
-      { property: "og:title", content: "Industries we serve" },
-      { property: "og:description", content: "Tailored facility services across seven industry verticals." },
+      { title: "Industries We Serve | Facility Management in Addis Ababa & Ethiopia" },
+      { name: "description", content: "Plus Facilities serves corporate offices, hotels, residences, commercial buildings, warehouses, retail spaces and event venues across Addis Ababa and Ethiopia." },
+      { property: "og:title", content: "Industries — Plus Facilities Ethiopia" },
+      { property: "og:description", content: "Tailored facility services for seven industry verticals across Ethiopia." },
+      { property: "og:url", content: "/industries" },
     ],
+    links: [{ rel: "canonical", href: "/industries" }],
   }),
   component: Industries,
 });
