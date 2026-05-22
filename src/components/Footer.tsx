@@ -20,7 +20,7 @@ export function Footer() {
       <div className="container-px relative mx-auto max-w-7xl py-20">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Logo className="h-20 md:h-24" invert />
+            <Logo className="h-20 md:h-24" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-[oklch(0.78_0.015_190)]">
               {t("footer.about")}
             </p>
