@@ -98,7 +98,7 @@ function Contact() {
             <div className="overflow-hidden rounded-3xl border border-border shadow-soft">
               <iframe
                 title="Plus Facilities location"
-                src="https://www.google.com/maps?q=Ayat+Shopping+Mall+2VC9%2B7M8+Addis+Ababa&output=embed"
+                src="https://www.google.com/maps?q=Ayat+Shopping+Mall+Addis+Ababa&output=embed"
                 width="100%"
                 height="320"
                 loading="lazy"
