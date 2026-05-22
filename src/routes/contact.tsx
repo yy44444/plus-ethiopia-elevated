@@ -9,11 +9,13 @@ import { sendForm } from "@/lib/sendForm";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Plus Facilities" },
-      { name: "description", content: "Reach Plus Facilities in Addis Ababa. Phone, email, WhatsApp, and a quote form for new projects." },
-      { property: "og:title", content: "Contact Plus Facilities" },
-      { property: "og:description", content: "Talk to our team in Addis Ababa." },
+      { title: "Contact Plus Facilities | Facility Management in Addis Ababa, Ethiopia" },
+      { name: "description", content: "Contact Plus Facilities in Addis Ababa for cleaning, security, pest control, landscaping and event support services. Call, email or WhatsApp our team in Ethiopia." },
+      { property: "og:title", content: "Contact Plus Facilities — Addis Ababa" },
+      { property: "og:description", content: "Reach our facility management team in Addis Ababa, Ethiopia." },
+      { property: "og:url", content: "/contact" },
     ],
+    links: [{ rel: "canonical", href: "/contact" }],
   }),
   component: Contact,
 });
