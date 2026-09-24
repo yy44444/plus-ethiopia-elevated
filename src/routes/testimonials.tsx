@@ -19,8 +19,8 @@ export const Route = createFileRoute("/testimonials")({
 
 const meta = [
   { name: "Selamawit Tadesse", org: "Bole Corporate Tower" },
-  { name: "Daniel Bekele", org: "Sheraton-area Hospitality Group" },
-  { name: "Hanna Mekonnen", org: "Kazanchis Office Park" },
+  { name: "Daniel Bekele", org: "Ayat Real Estate Residences" },
+  { name: "Hanna Mekonnen", org: "Sarbet Business Center" },
   { name: "Yonas Alemu", org: "CMC Residences" },
   { name: "Mahlet Girma", org: "Addis Boutique Hotel" },
   { name: "Robel Asfaw", org: "Megenagna Trade Center" },
