@@ -93,7 +93,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "LocalBusiness",
           name: "Plus Facilities",
           description:
-            "Integrated facility management company in Addis Ababa offering cleaning, security, landscaping, pest control, event support and property management services across Ethiopia.",
+            "Integrated facility management company in Addis Ababa offering cleaning, window cleaning, landscaping, pest control, event support and property management services across Ethiopia.",
           image: "/favicon.png",
           telephone: "+251975123512",
           email: "info.plusfacilities@gmail.com",

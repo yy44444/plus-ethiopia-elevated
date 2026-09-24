@@ -7,7 +7,7 @@ export const Route = createFileRoute("/testimonials")({
   head: () => ({
     meta: [
       { title: "Client Testimonials | Plus Facilities Addis Ababa, Ethiopia" },
-      { name: "description", content: "Read reviews from corporate, hospitality and residential clients in Addis Ababa and Ethiopia who trust Plus Facilities for cleaning, security and facility management." },
+      { name: "description", content: "Read reviews from corporate, hospitality and residential clients in Addis Ababa and Ethiopia who trust Plus Facilities for cleaning, window cleaning and facility management." },
       { property: "og:title", content: "Testimonials — Plus Facilities Ethiopia" },
       { property: "og:description", content: "What our clients in Ethiopia say about Plus Facilities." },
       { property: "og:url", content: "/testimonials" },

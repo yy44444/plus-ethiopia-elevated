@@ -27,7 +27,7 @@ const en: Dict = {
   "hero.title.1": "Professional Facility Management",
   "hero.title.2": "Solutions You Can Trust",
   "hero.subtitle":
-    "Delivering premium cleaning, security, landscaping, pest control, and event support services for businesses, residences, and events across Ethiopia.",
+    "Delivering premium cleaning, window cleaning, landscaping, pest control, and event support services for businesses, residences, and events across Ethiopia.",
 
   // Home About
   "home.about.eyebrow": "About Plus Facilities",
@@ -105,10 +105,16 @@ const en: Dict = {
   "svc.cleaning.short": "Cleaning & Janitorial",
   "svc.cleaning.desc":
     "Maintain spotless and hygienic environments with professional cleaning solutions tailored for offices, commercial properties, residential spaces, and hospitality facilities.",
-  "svc.security.title": "Security Services",
-  "svc.security.short": "Security",
-  "svc.security.desc":
-    "Protect your property and operations with trained security personnel dedicated to safety, professionalism, and rapid response.",
+  "svc.window.title": "Window Cleaning Services",
+  "svc.window.short": "Window Cleaning",
+  "svc.window.desc":
+    "Streak-free glass for commercial and residential buildings, delivered by trained, safety-certified technicians.",
+  "svc.window.i1": "Window Cleaning Services",
+  "svc.window.i2": "High-rise window cleaning",
+  "svc.window.i3": "Glass and façade window cleaning",
+  "svc.cleaning.i1": "Office & commercial cleaning",
+  "svc.cleaning.i2": "Residential & hospitality cleaning",
+  "svc.cleaning.i3": "After-construction / post-construction cleaning",
   "svc.landscaping.title": "Landscaping & Grounds Maintenance",
   "svc.landscaping.short": "Landscaping",
   "svc.landscaping.desc":
@@ -121,6 +127,8 @@ const en: Dict = {
   "svc.pest.short": "Pest Control",
   "svc.pest.desc":
     "Eliminate pests effectively using safe and modern treatment methods designed for residential, commercial, and industrial environments.",
+  "svc.pest.i1": "Residential & commercial pest control",
+  "svc.pest.i2": "Pre-construction termite treatment",
 
   // Industries
   "ind.eyebrow": "Industries we serve",
@@ -133,11 +141,11 @@ const en: Dict = {
   "ind.2.t": "Hotels & Hospitality",
   "ind.2.d": "Housekeeping, public-area care and brand-standard service for hospitality leaders.",
   "ind.3.t": "Residential Apartments",
-  "ind.3.d": "Common-area maintenance, security and pest programs for modern residences.",
+  "ind.3.d": "Common-area maintenance, window cleaning and pest programs for modern residences.",
   "ind.4.t": "Commercial Buildings",
   "ind.4.d": "Multi-tenant facility management with measurable SLAs and transparent reporting.",
   "ind.5.t": "Warehouses",
-  "ind.5.d": "Industrial cleaning, perimeter security and pest exclusion for logistics operations.",
+  "ind.5.d": "Industrial cleaning, window cleaning and pest exclusion for logistics operations.",
   "ind.6.t": "Retail Spaces",
   "ind.6.d": "High-traffic floor care, glass detailing and visitor-ready presentation every day.",
   "ind.7.t": "Events & Venues",
@@ -150,7 +158,7 @@ const en: Dict = {
   "tst.intro": "Trusted by corporate, hospitality, and residential leaders across Ethiopia.",
   "tst.1.q": "Plus Facilities transformed the cleanliness and professionalism of our office environment. Their team is reliable, organized, and highly professional.",
   "tst.1.r": "Operations Director",
-  "tst.2.q": "Their security and event support services exceeded our expectations with outstanding coordination and professionalism.",
+  "tst.2.q": "Their window cleaning and event support services exceeded our expectations with outstanding coordination and professionalism.",
   "tst.2.r": "General Manager",
   "tst.3.q": "From the first walkthrough to monthly reporting, everything is handled with precision. They're the partner we wish we'd hired sooner.",
   "tst.3.r": "Facilities Lead",
@@ -232,7 +240,7 @@ const am: Dict = {
   "hero.title.1": "የተዋጣለት የተቋማት አስተዳደር",
   "hero.title.2": "የሚታመኑበት መፍትሔዎች",
   "hero.subtitle":
-    "ለንግድ ድርጅቶች፣ ለመኖሪያ ቤቶችና ለዝግጅቶች የቅንጡ ጽዳት፣ ጥበቃ፣ የመሬት ገጽታ ልማት፣ የተባዮች ቁጥጥር እና የዝግጅት ድጋፍ አገልግሎቶችን በመላው ኢትዮጵያ እናቀርባለን።",
+    "ለንግድ ድርጅቶች፣ ለመኖሪያ ቤቶችና ለዝግጅቶች የቅንጡ ጽዳት፣ የመስኮት ጽዳት፣ የመሬት ገጽታ ልማት፣ የተባዮች ቁጥጥር እና የዝግጅት ድጋፍ አገልግሎቶችን በመላው ኢትዮጵያ እናቀርባለን።",
 
   // Home About
   "home.about.eyebrow": "ስለ ፕላስ ፋሲሊቲስ",
@@ -310,10 +318,16 @@ const am: Dict = {
   "svc.cleaning.short": "ጽዳት እና ጃኒቶሪያል",
   "svc.cleaning.desc":
     "ለቢሮዎች፣ ለንግድ ንብረቶች፣ ለመኖሪያ ቦታዎችና ለእንግዳ ማስተናገጃ ተቋማት የተዘጋጁ ሙያዊ የጽዳት መፍትሔዎችን በማቅረብ ንፁህና ጤናማ አካባቢዎችን ጠብቁ።",
-  "svc.security.title": "የጥበቃ አገልግሎቶች",
-  "svc.security.short": "ጥበቃ",
-  "svc.security.desc":
-    "ለደህንነት፣ ለሙያዊነትና ለፈጣን ምላሽ የተሰጡ የሰለጠኑ የጥበቃ ሠራተኞች በመጠቀም ንብረትዎንና ሥራዎን ይጠብቁ።",
+  "svc.window.title": "የመስኮት ጽዳት አገልግሎቶች",
+  "svc.window.short": "የመስኮት ጽዳት",
+  "svc.window.desc":
+    "በሰለጠኑና የደህንነት ማረጋገጫ ባላቸው ባለሙያዎች ለንግድና ለመኖሪያ ሕንፃዎች እንከን የለሽ የመስታወት ጽዳት።",
+  "svc.window.i1": "የመስኮት ጽዳት አገልግሎቶች",
+  "svc.window.i2": "የከፍታ ሕንፃዎች የመስኮት ጽዳት",
+  "svc.window.i3": "የመስታወትና የፊት ገጽ (façade) ጽዳት",
+  "svc.cleaning.i1": "የቢሮና የንግድ ቦታ ጽዳት",
+  "svc.cleaning.i2": "የመኖሪያና የሆቴል ጽዳት",
+  "svc.cleaning.i3": "ከግንባታ በኋላ የሚደረግ ጽዳት",
   "svc.landscaping.title": "የመሬት ገጽታ ልማት እና ጥገና",
   "svc.landscaping.short": "የመሬት ገጽታ",
   "svc.landscaping.desc":
@@ -326,6 +340,8 @@ const am: Dict = {
   "svc.pest.short": "የተባዮች ቁጥጥር",
   "svc.pest.desc":
     "ለመኖሪያ፣ ለንግድ እና ለኢንዱስትሪ አካባቢዎች የተዘጋጁ ደህንነቱ የተጠበቀና ዘመናዊ የሕክምና ዘዴዎችን በመጠቀም ተባዮችን በብቃት ያስወግዱ።",
+  "svc.pest.i1": "የመኖሪያና የንግድ ቦታ ተባይ ቁጥጥር",
+  "svc.pest.i2": "ከግንባታ በፊት የምስጥ መከላከያ ሕክምና",
 
   // Industries
   "ind.eyebrow": "የምንሰራባቸው ዘርፎች",
@@ -338,11 +354,11 @@ const am: Dict = {
   "ind.2.t": "ሆቴሎች እና እንግዳ መስተንግዶ",
   "ind.2.d": "ለእንግዳ መስተንግዶ መሪዎች የቤት እንክብካቤ፣ የሕዝብ ቦታ ጥንቃቄ እና የብራንድ ደረጃ አገልግሎት።",
   "ind.3.t": "የመኖሪያ አፓርትመንቶች",
-  "ind.3.d": "ለዘመናዊ መኖሪያዎች የጋራ ቦታ ጥገና፣ ጥበቃ እና የተባዮች መርሃ ግብሮች።",
+  "ind.3.d": "ለዘመናዊ መኖሪያዎች የጋራ ቦታ ጥገና፣ የመስኮት ጽዳት እና የተባዮች መርሃ ግብሮች።",
   "ind.4.t": "የንግድ ሕንፃዎች",
   "ind.4.d": "በሚለኩ የአገልግሎት ስምምነቶችና ግልጽ ሪፖርት የብዙ ተከራዮች የተቋማት አስተዳደር።",
   "ind.5.t": "መጋዘኖች",
-  "ind.5.d": "ለሎጂስቲክስ ሥራዎች የኢንዱስትሪ ጽዳት፣ የዙሪያ ጥበቃ እና የተባዮች መከላከል።",
+  "ind.5.d": "ለሎጂስቲክስ ሥራዎች የኢንዱስትሪ ጽዳት፣ የመስኮት ጽዳት እና የተባዮች መከላከል።",
   "ind.6.t": "የችርቻሮ ቦታዎች",
   "ind.6.d": "ለከፍተኛ ትራፊክ የወለል እንክብካቤ፣ የመስታወት ጽዳት እና ለጎብኚ ዝግጁ የሆነ አቀራረብ በየቀኑ።",
   "ind.7.t": "ዝግጅቶች እና ቦታዎች",
@@ -355,7 +371,7 @@ const am: Dict = {
   "tst.intro": "በመላው ኢትዮጵያ በድርጅት፣ በእንግዳ መስተንግዶ እና በመኖሪያ መሪዎች የታመነ።",
   "tst.1.q": "ፕላስ ፋሲሊቲስ የቢሮአችንን ንፅህናና ሙያዊነት ቀይሯል። ቡድናቸው አስተማማኝ፣ የተደራጀና በከፍተኛ ሙያዊነት የሚሠራ ነው።",
   "tst.1.r": "የሥራ ኃላፊ",
-  "tst.2.q": "የጥበቃና የዝግጅት ድጋፍ አገልግሎታቸው በላቀ ቅንጅትና ሙያዊነት ከጠበቅነው በላይ ሆኗል።",
+  "tst.2.q": "የመስኮት ጽዳትና የዝግጅት ድጋፍ አገልግሎታቸው በላቀ ቅንጅትና ሙያዊነት ከጠበቅነው በላይ ሆኗል።",
   "tst.2.r": "ዋና ሥራ አስኪያጅ",
   "tst.3.q": "ከመጀመሪያው ጉብኝት እስከ ወርሃዊ ሪፖርት ድረስ፣ ሁሉም ነገር በትክክለኛነት ይሠራል። ቀደም ብለን ብንቀጥራቸው እንመኛለን።",
   "tst.3.r": "የተቋማት ኃላፊ",
