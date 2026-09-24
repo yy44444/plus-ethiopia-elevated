@@ -10,7 +10,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact Plus Facilities | Facility Management in Addis Ababa, Ethiopia" },
-      { name: "description", content: "Contact Plus Facilities in Addis Ababa for cleaning, security, pest control, landscaping and event support services. Call, email or WhatsApp our team in Ethiopia." },
+      { name: "description", content: "Contact Plus Facilities in Addis Ababa for cleaning, window cleaning, pest control, landscaping and event support services. Call, email or WhatsApp our team in Ethiopia." },
       { property: "og:title", content: "Contact Plus Facilities — Addis Ababa" },
       { property: "og:description", content: "Reach our facility management team in Addis Ababa, Ethiopia." },
       { property: "og:url", content: "/contact" },

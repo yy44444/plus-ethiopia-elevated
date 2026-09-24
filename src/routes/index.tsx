@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Sparkles, ShieldCheck, Leaf, CalendarCheck, Bug, Users, Clock, Award, Zap, Heart, Wrench } from "lucide-react";
+import { ArrowRight, Sparkles, AppWindow, Leaf, CalendarCheck, Bug, Users, Clock, Award, Zap, Heart, Wrench } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
 import aboutImg from "@/assets/about.jpg";
 import { Section } from "@/components/Section";
@@ -10,11 +10,11 @@ import { useT } from "@/lib/i18n";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Plus Facilities | Cleaning, Security & Facility Management in Addis Ababa, Ethiopia" },
-      { name: "description", content: "Trusted facility management company in Addis Ababa offering cleaning services, security services, pest control, landscaping, event support and property management across Ethiopia." },
-      { name: "keywords", content: "cleaning services Addis Ababa, security services Ethiopia, pest control Addis Ababa, gardening services Ethiopia, property management Addis Ababa, event support services Ethiopia, facility management Ethiopia" },
+      { title: "Plus Facilities | Cleaning, Window Cleaning & Facility Management in Addis Ababa, Ethiopia" },
+      { name: "description", content: "Trusted facility management company in Addis Ababa offering cleaning services, window cleaning services, pest control, landscaping, event support and property management across Ethiopia." },
+      { name: "keywords", content: "cleaning services Addis Ababa, window cleaning Ethiopia, pest control Addis Ababa, gardening services Ethiopia, property management Addis Ababa, event support services Ethiopia, facility management Ethiopia" },
       { property: "og:title", content: "Plus Facilities — Facility Management in Addis Ababa" },
-      { property: "og:description", content: "Premium cleaning, security, landscaping, pest control and event support services across Addis Ababa and Ethiopia." },
+      { property: "og:description", content: "Premium cleaning, window cleaning, landscaping, pest control and event support services across Addis Ababa and Ethiopia." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const iconMap = { Sparkles, ShieldCheck, Leaf, CalendarCheck, Bug } as const;
+const iconMap = { Sparkles, AppWindow, Leaf, CalendarCheck, Bug } as const;
 
 function Hero() {
   const { open } = useQuote();

@@ -19,9 +19,9 @@ export const navLinks = [
 ] as const;
 
 export const services = [
-  { slug: "cleaning", icon: "Sparkles" },
-  { slug: "security", icon: "ShieldCheck" },
-  { slug: "landscaping", icon: "Leaf" },
-  { slug: "events", icon: "CalendarCheck" },
-  { slug: "pest", icon: "Bug" },
+  { slug: "cleaning", icon: "Sparkles", items: 3 },
+  { slug: "window", icon: "AppWindow", items: 3 },
+  { slug: "landscaping", icon: "Leaf", items: 0 },
+  { slug: "events", icon: "CalendarCheck", items: 0 },
+  { slug: "pest", icon: "Bug", items: 2 },
 ] as const;
