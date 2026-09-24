@@ -94,6 +94,7 @@ function Contact() {
           <div className="space-y-6">
             <ContactCard icon={MapPin} label={t("contact.card.office")} value={t("addis")} />
             <ContactCard icon={Phone} label={t("contact.card.phone")} value={site.phone} href={`tel:${site.phone}`} />
+            <ContactCard icon={Phone} label={t("contact.card.phone")} value={site.phone2} href={`tel:${site.phone2}`} />
             <ContactCard icon={Mail} label={t("contact.card.email")} value={site.email} href={`mailto:${site.email}`} />
             <ContactCard icon={MessageCircle} label={t("contact.card.whatsapp")} value={t("contact.card.whatsapp.value")} href={site.whatsapp} />
 

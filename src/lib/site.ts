@@ -1,6 +1,7 @@
 export const site = {
   name: "Plus Facilities",
   phone: "+251975123512",
+  phone2: "0911672209",
   phoneDigits: "251975123512",
   email: "info.plusfacilities@gmail.com",
   formEndpoint: "https://formsubmit.co/ajax/info.plusfacilities@gmail.com",
@@ -21,7 +22,7 @@ export const navLinks = [
 export const services = [
   { slug: "cleaning", icon: "Sparkles", items: 3 },
   { slug: "window", icon: "AppWindow", items: 3 },
+  { slug: "pest", icon: "Bug", items: 2 },
   { slug: "landscaping", icon: "Leaf", items: 0 },
   { slug: "events", icon: "CalendarCheck", items: 0 },
-  { slug: "pest", icon: "Bug", items: 2 },
 ] as const;

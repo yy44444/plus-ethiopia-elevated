@@ -66,7 +66,7 @@ export function Footer() {
             <h4 className="mb-5 font-display text-sm uppercase tracking-[0.18em] text-accent">{t("footer.contact")}</h4>
             <ul className="space-y-4 text-sm">
               <li className="flex gap-3"><MapPin size={16} className="mt-0.5 text-accent shrink-0" /><span className="text-[oklch(0.82_0.012_190)]">{t("addis")}</span></li>
-              <li className="flex gap-3"><Phone size={16} className="mt-0.5 text-accent shrink-0" /><a href={`tel:${site.phone}`} className="text-[oklch(0.82_0.012_190)] hover:text-accent">{site.phone}</a></li>
+              <li className="flex gap-3"><Phone size={16} className="mt-0.5 text-accent shrink-0" /><span className="flex flex-col"><a href={`tel:${site.phone}`} className="text-[oklch(0.82_0.012_190)] hover:text-accent">{site.phone}</a><a href={`tel:${site.phone2}`} className="text-[oklch(0.82_0.012_190)] hover:text-accent">{site.phone2}</a></span></li>
               <li className="flex gap-3"><Mail size={16} className="mt-0.5 text-accent shrink-0" /><a href={`mailto:${site.email}`} className="text-[oklch(0.82_0.012_190)] hover:text-accent">{site.email}</a></li>
             </ul>
           </div>
