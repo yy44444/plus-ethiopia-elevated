@@ -26,7 +26,7 @@ export const Route = createFileRoute("/services")({
 });
 
 const iconMap = { Sparkles, AppWindow, Leaf, CalendarCheck, Bug } as const;
-const imgMap: Record<string, string> = { cleaning, window cleaning, landscaping, events, pest };
+const imgMap: Record<string, string> = { cleaning, window: windowImg, landscaping, events, pest };
 
 function Services() {
   const { open } = useQuote();
